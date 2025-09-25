@@ -224,6 +224,7 @@ public class BingoSetService : IAsyncDisposable
         {
             Id = id,
             Name = updatedSet.Name,
+            FreeSpaceText = updatedSet.FreeSpaceText,
             Items = updatedSet.Items.Where(i => !string.IsNullOrWhiteSpace(i))
                                   .Distinct(StringComparer.OrdinalIgnoreCase)
                                   .ToArray()
@@ -262,6 +263,7 @@ public class BingoSetService : IAsyncDisposable
         var newSet = new BingoSet
         {
             Id = id,
+            FreeSpaceText = updatedSet.FreeSpaceText,
             Name = updatedSet.Name,
             Items = updatedSet.Items.Where(i => !string.IsNullOrWhiteSpace(i))
                                   .Distinct(StringComparer.OrdinalIgnoreCase)

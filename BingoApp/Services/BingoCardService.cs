@@ -32,7 +32,7 @@ public class BingoCardService
 
             do
             {
-                newCard = GenerateCard(set.Items.Distinct(StringComparer.OrdinalIgnoreCase).ToArray());
+                newCard = GenerateCard(set.Items.Distinct(StringComparer.OrdinalIgnoreCase).ToArray(), set.FreeSpaceText);
                 isUnique = !IsCardDuplicate(newCard);
                 attempts++;
 
@@ -77,7 +77,7 @@ public class BingoCardService
         return false;
     }
 
-    private string[][] GenerateCard(string[] items)
+    private string[][] GenerateCard(string[] items, string centerSpace = "FREE")
     {
         // Create a 5x5 grid
         var card = new string[GridSize][];
@@ -97,7 +97,7 @@ public class BingoCardService
                 // Center is free
                 if (row == 2 && col == 2)
                 {
-                    card[row][col] = "FREE";
+                    card[row][col] = centerSpace;
                     continue;
                 }
 

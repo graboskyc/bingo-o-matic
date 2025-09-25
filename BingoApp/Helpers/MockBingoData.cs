@@ -10,6 +10,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "Popular Dog Breeds",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Labrador Retriever", "French Bulldog", "Golden Retriever", "German Shepherd", "Poodle",
@@ -34,6 +35,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "Dog Behaviors & Activities",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Wagging Tail", "Fetch", "Belly Rubs", "Chasing Squirrels", "Barking at Mail Carrier",
@@ -57,6 +59,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "Birds of North America",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "American Robin", "Northern Cardinal", "Blue Jay", "Black-capped Chickadee", "American Goldfinch",
@@ -80,6 +83,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "Central Oregon Attractions",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Smith Rock", "Mt. Bachelor", "Tumalo Falls", "Deschutes River", "Pilot Butte",
@@ -103,6 +107,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "Famous Mountains",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Mount Everest", "K2", "Matterhorn", "Mount Kilimanjaro", "Mount Fuji",
@@ -124,6 +129,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "PNW Geographic Features",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Puget Sound", "Columbia River", "Willamette Valley", "Olympic Peninsula", "San Juan Islands",
@@ -146,6 +152,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "World Capital Cities",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Tokyo", "Beijing", "Moscow", "London", "Paris",
@@ -170,6 +177,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "North American Wildlife",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Grizzly Bear", "Black Bear", "Wolf", "Mountain Lion", "Moose",
@@ -193,6 +201,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "Classic TV Shows",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "I Love Lucy", "The Twilight Zone", "M*A*S*H", "Cheers", "Friends",
@@ -214,6 +223,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "Colorado Landmarks",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Garden of the Gods", "Red Rocks Amphitheatre", "Pikes Peak", "Royal Gorge Bridge", "Mesa Verde National Park",
@@ -232,6 +242,7 @@ public static class MockBingoData
         {
             Id = Guid.NewGuid(),
             Name = "Colorado Geography",
+            FreeSpaceText = "FREE",
             Items = new[]
             {
                 "Rocky Mountains", "Front Range", "San Juan Mountains", "Sawatch Range", "Sangre de Cristo Mountains",

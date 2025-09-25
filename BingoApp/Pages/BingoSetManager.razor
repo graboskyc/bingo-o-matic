@@ -77,6 +77,10 @@
                         <input type="text" class="form-control" @bind="newSetName" />
                     </div>
                     <div class="mb-3">
+                        <label class="form-label">Free Space Text</label>
+                        <input type="text" class="form-control" @bind="newSetFreeSpace" />
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label">Items (separate by new lines, commas, or semicolons)</label>
                         <textarea class="form-control" rows="10" @bind="newSetItems" 
                                 placeholder="Enter items here... One per line, or separated by comma, or separated by semicolons."></textarea>
@@ -148,6 +152,7 @@
     private BingoSet? deleteSet;
     private bool showEditor;
     private string? newSetName;
+    private string? newSetFreeSpace = "FREE";
     private string? newSetItems;
     private string? errorMessage;
     private List<BingoSet> missingMockSets = new();
@@ -192,6 +197,7 @@
     {
         editingSet = null;
         newSetName = "";
+        newSetFreeSpace = "FREE";
         newSetItems = "";
         errorMessage = null;
         showEditor = true;
@@ -201,6 +207,7 @@
     {
         editingSet = set;
         newSetName = set.Name;
+        newSetFreeSpace = set.FreeSpaceText;
         newSetItems = string.Join(Environment.NewLine, set.Items);
         errorMessage = null;
         showEditor = true;
@@ -211,6 +218,7 @@
         showEditor = false;
         editingSet = null;
         newSetName = null;
+        newSetFreeSpace = null;
         newSetItems = null;
         errorMessage = null;
     }
@@ -252,6 +260,7 @@
             var set = new BingoSet
             {
                 Name = newSetName,
+                FreeSpaceText = newSetFreeSpace,
                 Items = items
             };
 
@@ -282,7 +291,7 @@
     {
         try
         {
-            await BingoService.AddSetAsync(new BingoSet { Name = mockSet.Name, Items = mockSet.Items });
+            await BingoService.AddSetAsync(new BingoSet { Name = mockSet.Name, Items = mockSet.Items, FreeSpaceText = mockSet.FreeSpaceText });
             await LoadBingoSetsAsync();
         }
         catch (Exception ex)
